@@ -108,8 +108,9 @@ Con este esquema, el refresco de la matriz se mantiene constante y libre de carg
 
 ---
 
-## 🧱 Estructura del proyecto
+## 📦 Estructura del proyecto
 
+```
 Core/
 ├── Inc/
 │   ├── colors.h
@@ -133,6 +134,7 @@ Core/
 │   ├── syscalls.c
 │   ├── sysmem.c
 │   └── system_stm32f4xx.c
+```
 
 
 ---
