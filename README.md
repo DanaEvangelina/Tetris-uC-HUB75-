@@ -113,27 +113,32 @@ Con este esquema, el refresco de la matriz se mantiene constante y libre de carg
 ```
 Core/
 ├── Inc/
-│   ├── colors.h
-│   ├── inicializacion.h
-│   ├── led.h
-│   ├── led_programs.h
-│   ├── main.h
-│   ├── stm32f4xx_hal_msp.h
-│   ├── stm32f4xx_it.h
-│   └── systick.h
+│   ├── colors.h              # Definición de los colores
+│   ├── inicializacion.h      # Funciones de configuración de periféricos
+│   ├── led.h                 # Estructuras y funciones para el manejo del panel LED
+│   ├── led_programs.h        # Definiciones de juegos y efectos visuales
+│   ├── main.h                # Definiciones globales del proyecto
+│   ├── stm32f4xx_hal_msp.h   # Prototipos de inicialización MSP (HAL)
+│   ├── stm32f4xx_it.h        # Prototipos de manejadores de interrupciones
+│   └── systick.h             # Manejo del SysTick
 │
 ├── Src/
-│   ├── inicializacion.c
-│   ├── interrupts.c
-│   ├── led.c
-│   ├── led_programs.c
-│   ├── main.c
-│   ├── stm32f4xx_it.c
-│   ├── stm32f4xx_hal_msp.c
-│   ├── systick.c
-│   ├── syscalls.c
-│   ├── sysmem.c
-│   └── system_stm32f4xx.c
+│   ├── inicializacion.c      # Configuración de periféricos (TIM, DMA, ADC, GPIO, EXTI)
+│   ├── interrupts.c          # Rutinas de interrupción de usuario.
+│   │                           Separa la lógica de `stm32f4xx_it.c`
+│   ├── led.c                 # Bajo nivel para la matriz LED HUB75.
+│   │                           Manejo de buffers `frame` y `static_frame`
+│   ├── led_programs.c        # Lógica del Tetris, efectos visuales
+│   │                           y pantallas de Start y Game Over
+│   ├── main.c                # Inicialización del sistema y bucle principal
+│   │                           Implementa la máquina de estados
+│   ├── stm32f4xx_it.c        # Interrupciones generadas por CubeMX
+│   ├── stm32f4xx_hal_msp.c   # Inicialización MSP: clocks, GPIO, DMA, EXTI
+│   ├── systick.c             # Implementación del SysTick
+│   ├── syscalls.c            # Soporte de llamadas al sistema (newlib)
+│   ├── sysmem.c              # Gestión de memoria dinámica
+│   └── system_stm32f4xx.c    # Configuración del sistema y del clock
+
 ```
 
 
