@@ -112,36 +112,48 @@ Con este esquema, el refresco de la matriz se mantiene constante y libre de carg
 
 Core/
 ├── Inc/
-│   ├── colors.h              # Definición de los colores
-│   ├── inicializacion.h      # Prototipos de funciones de configuración de periféricos
-│   ├── led.h                 # Estructuras de datos y funciones para el manejo del panel LED
-│   ├── led_programs.h        # Definiciones de programas, juegos y efectos sobre el panel LED
-│   ├── main.h                # Definiciones globales del proyecto
-│   ├── stm32f4xx_hal_msp.h   # Prototipos de inicialización MSP (HAL)
-│   ├── stm32f4xx_it.h        # Prototipos de manejadores de interrupciones
-│   └── systick.h             # Manejo del SysTick y temporización
+│   ├── colors.h
+│   │   └── Definición de los colores
+│   ├── inicializacion.h
+│   │   └── Prototipos de funciones de configuración de periféricos
+│   ├── led.h
+│   │   └── Estructuras de datos y funciones para el manejo del panel LED
+│   ├── led_programs.h
+│   │   └── Definiciones de juegos y efectos sobre el panel LED
+│   ├── main.h
+│   │   └── Definiciones globales del proyecto
+│   ├── stm32f4xx_hal_msp.h
+│   │   └── Prototipos de inicialización MSP (HAL)
+│   ├── stm32f4xx_it.h
+│   │   └── Prototipos de manejadores de interrupciones
+│   └── systick.h
+│       └── Manejo del SysTick y temporización
 │
 ├── Src/
-│   ├── inicializacion.c      # Configuración de periféricos (TIM, DMA, ADC, GPIO, EXTI)
-│   ├── interrupts.c          # Rutinas de interrupción de usuario (TIM, DMA, ADC, EXTI).
-│   │                           Separa la lógica de interrupciones del archivo generado
-│   │                           `stm32f4xx_it.c`
-│   ├── led.c                 # Funciones de bajo nivel para escribir en la matriz LED HUB75.
-│   │                           Maneja los buffers de imagen (`frame`, `static_frame`)
-│   │                           y la comunicación con los pines de datos
-│   ├── led_programs.c        # Lógica del Tetris (tetrominos, colisiones, estados del juego),
-│   │                           efectos visuales y pantallas de Start y Game Over
-│   ├── main.c                # Inicialización de hardware y periféricos.
-│   │                           Configuración del panel y ejecución del bucle principal
-│   │                           (máquina de estados)
-│   ├── stm32f4xx_it.c        # Manejo de interrupciones generado por CubeMX.
-│   │                           Algunas rutinas redirigen a `interrupts.c`
-│   ├── stm32f4xx_hal_msp.c   # Inicialización MSP de HAL: clocks, GPIO alternativos,
-│   │                           DMA y prioridades de interrupción
-│   ├── systick.c             # Implementación del manejo de SysTick
-│   ├── syscalls.c            # Soporte de llamadas al sistema (newlib)
-│   ├── sysmem.c              # Gestión de memoria dinámica
-│   └── system_stm32f4xx.c    # Configuración del sistema y del clock
+│   ├── inicializacion.c
+│   │   └── Configuración de periféricos (TIM, DMA, ADC, GPIO, EXTI)
+│   ├── interrupts.c
+│   │   └── Rutinas de interrupción de usuario (TIM, DMA, ADC, EXTI)
+│   ├── led.c
+│   │   └── Funciones de bajo nivel para la matriz LED HUB75
+│   │       Manejo de buffers (`frame`, `static_frame`)
+│   ├── led_programs.c
+│   │   └── Lógica del Tetris, efectos visuales y pantallas
+│   ├── main.c
+│   │   └── Inicialización del sistema y bucle principal
+│   │       Implementación de la máquina de estados
+│   ├── stm32f4xx_it.c
+│   │   └── Interrupciones generadas por CubeMX
+│   ├── stm32f4xx_hal_msp.c
+│   │   └── Inicialización MSP de HAL
+│   ├── systick.c
+│   │   └── Implementación del SysTick
+│   ├── syscalls.c
+│   │   └── Soporte de llamadas al sistema (newlib)
+│   ├── sysmem.c
+│   │   └── Gestión de memoria dinámica
+│   └── system_stm32f4xx.c
+│       └── Configuración del sistema y del clock
 
 
 ---
