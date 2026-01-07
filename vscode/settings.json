@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "colors.h": "c",
+        "image1.h": "c",
+        "systick.h": "c",
+        "stm32f446xx.h": "c",
+        "main.h": "c",
+        "compare": "cpp"
+    }
+}
