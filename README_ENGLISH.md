@@ -108,3 +108,37 @@ With this scheme, the matrix refresh remains constant and CPU-free, allowing the
 
 ## 🧱 Project structure
 
+```
+Core/
+├── Inc/
+│   ├── colors.h              # Color definitions
+│   ├── inicializacion.h      # Peripheral configuration functions
+│   ├── led.h                 # Data structures and functions for LED panel handling
+│   ├── led_programs.h        # Game and visual effect definitions
+│   ├── main.h                # Global project definitions
+│   ├── stm32f4xx_hal_msp.h   # MSP initialization prototypes (HAL)
+│   ├── stm32f4xx_it.h        # Interrupt handler prototypes
+│   └── systick.h             # SysTick handling
+│
+├── Src/
+│   ├── inicializacion.c      # Peripheral configuration (TIM, DMA, ADC, GPIO, EXTI)
+│   ├── interrupts.c          # User interrupt routines.
+│   │                           Separates logic from stm32f4xx_it.c
+│   ├── led.c                 # Low-level HUB75 LED matrix driver.
+│   │                           Handles frame and static_frame buffers
+│   ├── led_programs.c        # Tetris logic, visual effects,
+│   │                           Start and Game Over screens
+│   ├── main.c                # System initialization and main loop
+│   │                           Implements the state machine
+│   ├── stm32f4xx_it.c        # CubeMX-generated interrupt handlers
+│   ├── stm32f4xx_hal_msp.c   # MSP initialization: clocks, GPIO, DMA, EXTI
+│   ├── systick.c             # SysTick implementation
+│   ├── syscalls.c            # System call support (newlib)
+│   ├── sysmem.c              # Dynamic memory management
+│   └── system_stm32f4xx.c    # System and clock configuration
+```
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+(Written with AI assistance)
+
