@@ -157,13 +157,13 @@ Core/
 One of the most rewarding aspects of this project was bringing the hardware to life. The firmware, wiring, and display driver were developed and debugged through multiple hardware iterations until achieving a stable, flicker-free refresh and smooth gameplay.
 
 <p align="center">
-  <img src="docs/images/1.jpg" width="48%">
-  <img src="docs/images/4.jpg" width="48%">
+  <img src="docs/images/1.jpeg" width="48%">
+  <img src="docs/images/4.jpeg" width="48%">
 </p>
 
 <p align="center">
-  <img src="docs/images/3.jpg" width="48%">
-  <img src="docs/images/2.jpg" width="48%">
+  <img src="docs/images/3.jpeg" width="48%">
+  <img src="docs/images/2.jpeg" width="48%">
 </p>
 
 
