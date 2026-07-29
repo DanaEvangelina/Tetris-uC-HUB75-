@@ -25,7 +25,7 @@ Base Tetris project          -> https://github.com/svedev0/tetris-c/tree/master
 ## 📷 Hardware
 
 <p align="center">
-  <img src="docs/images/5.jpeg" width="48%">
+  <img src="docs/images/5.png" width="48%">
   <img src="docs/images/6.jpeg" width="48%">
 </p>
 
