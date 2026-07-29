@@ -22,6 +22,17 @@ Base Tetris project          -> https://github.com/svedev0/tetris-c/tree/master
 ---
 
 
+## 📷 Hardware
+
+<p align="center">
+  <img src="docs/images/5.jpeg" width="48%">
+  <img src="docs/images/6.jpeg" width="48%">
+</p>
+
+*Final prototype based on an STM32F446RE Nucleo board driving a 64×64 HUB75 RGB LED matrix.*
+
+---
+
 ## 🧩 Main features
 
 - Full HUB75 panel control using **DMA** and **timers**
